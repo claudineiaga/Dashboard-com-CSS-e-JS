@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Dashboard</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <script src='main.js'></script>
+    <input type="checkbox" id="nav-toggle">
+    <div class="sidebar">
+            <div class="sidebar-brand">
+                <h2><span><i class="fab fa-accusoft"></i></span>
+                    <span id="kleenpulse">Bem Vindo</span></h2>
+            </div>
+            <div class="sidebar-menu">
+                <ul>
+                    <li>
+                        <a href="#" class="active"><span class="fas fa-cubes"></span>
+                            <span>Boa Noite</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="fas fa-users"></span>
+                            <span>Cliente</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="fas fa-clipboard-list"></span>
+                            <span>Projetos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="fas fa-shopping-bag"></span>
+                            <span>Ordens</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="fas fa-receipt"></span>
+                            <span>Inventário</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="fa fa-user-circle"></span>
+                            <span>Contas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="fas fa-clipboard"></span>
+                            <span>Tarefa</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    </div>
+    <div class="main-wrapper">
+    <div class="main-content">
+            <header>
+                <h2 class="heading" id="dashboard">
+                    Dashboard
+                    </h2>
+                    <label for="nav-toggle">
+                        <span class="fas fa-bars"></span>
+                    </label>
+                  
+                <div class="search">
+                    <div class="search-rotate">
+                    <div class="icon"></div>
+                    </div>
+                    <div class="input">
+                        <input type="text" placeholder="pesquisar" 
+                        id="mysearch" autocomplete="off" onkeydown="display(this)">
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="switch" id="switch">
+                    <div id="toggle">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                        <i class="indicator"></i>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card-single">
+                        <div>
+                            <h1 id="customer"></h1>
+                            <span>Clientes Felizes</span>
+                        </div>
+                        <div>
+                            <span class="fas fa-users"></span>
+                        </div>
+                    </div>
+                    <div class="card-single">
+                        <div>
+                            <h1 id="project"></h1>
+                            <span>Projetos Feitos</span>
+                        </div>
+                        <div>
+                            <span class="fas fa-clipboard"></span>
+                        </div>
+                    </div>
+                    <div class="card-single">
+                        <div>
+                            <h1 id="order"></h1>
+                            <span>Ordens Confirmadas</span>
+                        </div>
+                        <div>
+                            <span class="fas fa-shopping-bag"></span>
+                        </div>
+                    </div>
+                    <div class="card-single">
+                        <div>
+                            <h1><sup>$</sup>
+                                <p id="income"><b>k</b></p>
+                            </h1>
+                            <span>Renda Semanal</span>
+                        </div>
+                        <div>
+                            <span class="fab fa-google-wallet"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="recent-grid">
+                    <div class="projects">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="heading">Projetos Recentes</h3>
+                                <button>Ver Tudo<span class="fas fa-arrow-right"></span>
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table width="100%">
+                                        <thead>
+                                            <tr>
+                                                <td>Título do Projeto</td>
+                                                <td>Departamento</td>
+                                                <td>Status</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>UI/UX Design</td>
+                                                <td>Time UI</td>
+                                                <td>
+                                                    <span class="status purple"></span>revisao
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Web Dev</td>
+                                                <td>Front End</td>
+                                                <td>
+                                                    <span class="status pink"></span>pendente
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>App Ushop</td>
+                                                <td>Time Mobile</td>
+                                                <td>
+                                                    <span class="status orange"></span>ativo
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>UI/UX Design</td>
+                                                <td>TimeUI</td>
+                                                <td>
+                                                    <span class="status purple"></span>revisão
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Web Dev</td>
+                                                <td>Front End</td>
+                                                <td>
+                                                    <span class="status pink"></span>pendente
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ushop App</td>
+                                                <td>Mobile Team</td>
+                                                <td>
+                                                    <span class="status orange"></span>ativo
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>UI/UX Design</td>
+                                                <td>Time UI</td>
+                                                <td>
+                                                    <span class="status purple"></span>revisao
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Web Dev</td>
+                                                <td>Frontend</td>
+                                                <td>
+                                                    <span class="status pink"></span>pendente
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="customers">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="heading">Novos Clientes</h3>
+                                <button>Ver Tudo<span class="fas fa-arrow-right"></span></button>
+                            </div>
+                            <div class="card-body">
+                                <div class="customer">
+                                    <div class="info">
+                                        <div>
+                                            <h4>Cortes Cosméticos</h4>
+                                        </div>
+                                    </div>
+                                    <div class="contact">
+                                        <span class="fas fa-user-circle"></span>
+                                        <span class="fas fa-comment"></span>
+                                        <span class="fas fa-phone"></span>
+                                    </div>
+                                </div>
+                                <div class="customer">
+                                    <div class="info">
+                                        <div>
+                                            <h4>Cortes Cosméticos</h4>
+                                        </div>
+                                    </div>
+                                    <div class="contact">
+                                    <span class="fas fa-user-circle"></span>
+                                    <span class="fas fa-comment"></span>
+                                    <span class="fas fa-phone"></span>
+                                    </div>
+                                </div>
+                                <div class="customer">
+                                    <div class="info">
+                                        <div>
+                                            <h4>Cortes Cosméticos</h4>
+                                        </div>
+                                    </div>
+                                    <div class="contact">
+                                    <span class="fas fa-user-circle"></span>
+                                    <span class="fas fa-comment"></span>
+                                    <span class="fas fa-phone"></span>
+                                    </div>
+                                </div>
+                                <div class="customer">
+                                    <div class="info">
+                                        <div>
+                                            <h4>Cortes Cosméticos</h4>
+                                        </div>
+                                    </div>
+                                    <div class="contact">
+                                        <span class="fas fa-user-circle"></span>
+                                        <span class="fas fa-comment"></span>
+                                        <span class="fas fa-phone"></span>
+                                    </div>
+                                </div>
+                                <div class="customer">
+                                    <div class="info">
+                                        <div>
+                                            <h4>Cortes Cosméticos</h4>
+                                        </div>
+                                    </div>
+                                    <div class="contact">
+                                        <span class="fas fa-user-circle"></span>
+                                        <span class="fas fa-comment"></span>
+                                        <span class="fas fa-phone"></span>
+                                    </div>
+                                </div>
+    
+                                <div class="customer">
+                                    <div class="info">
+                                        <div>
+                                            <h4>Cortes Cosméticos</h4>
+                                        </div>
+                                    </div>
+                                    <div class="contact">
+                                        <span class="fas fa-user-circle"></span>
+                                        <span class="fas fa-comment"></span>
+                                        <span class="fas fa-phone"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+    </div>
+    </div>
+    <video class="video-1" src="https://res.cloudinary.com/liquidtime/video/upload/v1655385934/abstract_fihenv.mp4" loop muted autoplay></video>
+    <video class="video-2" src="https://res.cloudinary.com/liquidtime/video/upload/v1655385877/dark_wave_irg2pp.mp4" loop muted
+        autoplay>
+    </video>
+</body>
+</html>
